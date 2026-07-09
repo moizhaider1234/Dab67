@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$DAB67 — The Dab Heard Round The Chain</title>
+<meta name="description" content="$DAB67 — 67 was just a number. Then somebody dabbed. Community memecoin, no utility, all vibes.">
+
+<!-- Favicon: drop favicon.png (recommend 512x512, cropped tight to the flame O) into /assets -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ambient ember canvas, sits behind everything -->
+<canvas id="ember-canvas"></canvas>
+
+<div class="grain"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <img src="assets/logo.png" alt="Dab67 flame logo" class="nav-logo" onerror="this.style.display='none'">
+      <span class="nav-word">DAB<em>67</em></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#lore">Lore</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#buy">Buy</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="#buy">Ape In</a>
+    </div>
+
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile" id="navMobile">
+    <a href="#lore">Lore</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#buy">Buy</a>
+    <a href="#roadmap">Roadmap</a>
+  </div>
+</header>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>DAB67</span><span>•</span><span>67 WASN'T RANDOM</span><span>•</span>
+    <span>NO TAX</span><span>•</span><span>LP BURNED</span><span>•</span>
+    <span>DAB67</span><span>•</span><span>ONE POSE. ONE CHAIN.</span><span>•</span>
+    <span>NO TAX</span><span>•</span><span>LP BURNED</span><span>•</span>
+    <span>DAB67</span><span>•</span><span>67 WASN'T RANDOM</span><span>•</span>
+    <span>NO TAX</span><span>•</span><span>LP BURNED</span><span>•</span>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="eyebrow reveal">SOLANA · LIVE ON PUMP.FUN</p>
+
+    <h1 class="hero-word reveal">
+      <span class="flicker">DAB</span><span class="flicker flicker-delay">67</span>
+    </h1>
+
+    <p class="hero-sub reveal">
+      Somebody asked why. Somebody dabbed instead. That's the whole whitepaper.
+    </p>
+
+    <div class="ca-chip reveal" id="caChip" tabindex="0" role="button" aria-label="Copy contract address">
+      <span class="ca-label">CA</span>
+      <span class="ca-address" id="caAddress">AHuUiC8EXYmDDwjjYZj4Kck1vCcUWzna1gvNxSiqpump</span>
+      <span class="ca-copy-icon" id="caCopyIcon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </span>
+    </div>
+    <p class="ca-toast" id="caToast">copied to clipboard 🔥</p>
+
+    <div class="hero-actions reveal">
+      <a href="https://pump.fun" target="_blank" rel="noopener" class="btn btn-primary">
+        <span>Buy $DAB67</span>
+      </a>
+      <a href="https://dexscreener.com" target="_blank" rel="noopener" class="btn btn-outline">
+        <span>View Chart</span>
+      </a>
+    </div>
+
+    <div class="hero-stats reveal">
+      <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span><span class="stat-label">Community owned</span></div>
+      <div class="stat"><span class="stat-num" data-target="0">0</span><span class="stat-label">Tax, forever</span></div>
+      <div class="stat"><span class="stat-num" data-target="67">0</span><span class="stat-label">Is the number</span></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ================= LORE ================= -->
+<section class="lore" id="lore">
+  <div class="lore-media reveal">
+    <img src="assets/hero.jpg" alt="The original dab, mid-motion, trailing light" onerror="this.parentElement.classList.add('media-missing')">
+    <div class="lore-media-glow"></div>
+  </div>
+
+  <div class="lore-copy">
+    <p class="eyebrow reveal">THE ORIGIN</p>
+    <h2 class="reveal">67 wasn't a number.<br>It was a setup.</h2>
+    <p class="reveal">
+      Somewhere between a locker room joke and a hundred million views, "6&nbsp;7" stopped meaning anything
+      and started meaning everything. No one can explain it. Everyone still says it.
+    </p>
+    <p class="reveal">
+      Then somebody dabbed. On camera, in a hallway, for no reason anyone can point to.
+      The internet did what the internet does: it took a shrug and turned it into a religion.
+    </p>
+    <p class="reveal">
+      $DAB67 is that shrug, tokenized. No roadmap to a real product. No founder promising
+      a payment app. Just the pose, the number, and a chart that either goes up or it doesn't.
+    </p>
+    <p class="lore-tag reveal">Built different. Explained never.</p>
+  </div>
+</section>
+
+<!-- ================= TOKENOMICS ================= -->
+<section class="tokenomics" id="tokenomics">
+  <p class="eyebrow reveal center">TOKENOMICS</p>
+  <h2 class="section-title reveal center">Simple, because the joke doesn't need a mechanism</h2>
+
+  <div class="token-grid">
+    <div class="token-card reveal">
+      <span class="token-icon">🔥</span>
+      <h3>0% Tax</h3>
+      <p>No buy tax, no sell tax. What you ape is what you keep.</p>
+    </div>
+    <div class="token-card reveal">
+      <span class="token-icon">🔒</span>
+      <h3>LP Burned</h3>
+      <p>Liquidity locked and burned at launch. Nobody's pulling the rug on a dab.</p>
+    </div>
+    <div class="token-card reveal">
+      <span class="token-icon">🖐️</span>
+      <h3>Renounced</h3>
+      <p>Contract ownership renounced. No mint function, no admin keys, no take-backs.</p>
+    </div>
+    <div class="token-card reveal">
+      <span class="token-icon">🌐</span>
+      <h3>100% Fair Launch</h3>
+      <p>No presale, no team allocation. Everyone entered through the same door.</p>
+    </div>
+  </div>
+
+  <div class="ca-repeat reveal">
+    <span>Contract</span>
+    <code id="caAddress2">AHuUiC8EXYmDDwjjYZj4Kck1vCcUWzna1gvNxSiqpump</code>
+    <button class="mini-copy" id="miniCopy" aria-label="Copy contract address">Copy</button>
+  </div>
+</section>
+
+<!-- ================= HOW TO BUY ================= -->
+<section class="buy" id="buy">
+  <p class="eyebrow reveal center">HOW TO BUY</p>
+  <h2 class="section-title reveal center">Four steps between you and the pose</h2>
+
+  <div class="steps">
+    <div class="step reveal">
+      <span class="step-index">01</span>
+      <h3>Get a wallet</h3>
+      <p>Download Phantom or your Solana wallet of choice. Fund it with SOL from an exchange.</p>
+    </div>
+    <div class="step reveal">
+      <span class="step-index">02</span>
+      <h3>Head to Pump.fun</h3>
+      <p>Search the contract address below or follow the buy button. Verify it matches, always.</p>
+    </div>
+    <div class="step reveal">
+      <span class="step-index">03</span>
+      <h3>Swap SOL for $DAB67</h3>
+      <p>Set your slippage, confirm the swap, and let it land in your wallet.</p>
+    </div>
+    <div class="step reveal">
+      <span class="step-index">04</span>
+      <h3>Hold the pose</h3>
+      <p>Join the chats, dab in the group chat, watch the chart. That's the whole game.</p>
+    </div>
+  </div>
+
+  <div class="buy-cta reveal">
+    <a href="https://pump.fun" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Buy $DAB67 Now</a>
+  </div>
+</section>
+
+<!-- ================= ROADMAP ================= -->
+<section class="roadmap" id="roadmap">
+  <p class="eyebrow reveal center">FLAME STAGES</p>
+  <h2 class="section-title reveal center">Not a roadmap. A burn rate.</h2>
+
+  <div class="flame-stages">
+    <div class="flame-stage reveal">
+      <div class="flame-stage-icon">✦</div>
+      <h3>Spark</h3>
+      <p>Fair launch on Pump.fun. First hundred hands catch the flame. Meme templates hit the timeline.</p>
+    </div>
+    <div class="flame-stage reveal">
+      <div class="flame-stage-icon">✧</div>
+      <h3>Blaze</h3>
+      <p>CoinGecko / CMC listings. First CT callouts. The dab starts showing up in places it shouldn't.</p>
+    </div>
+    <div class="flame-stage reveal">
+      <div class="flame-stage-icon">❋</div>
+      <h3>Inferno</h3>
+      <p>Community-run giveaways, meme contests, and whatever chaos the holders vote into existence.</p>
+    </div>
+    <div class="flame-stage reveal">
+      <div class="flame-stage-icon">☄</div>
+      <h3>Legendary</h3>
+      <p>67 and dab become permanently, uselessly fused in internet history. Mission already accomplished.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMMUNITY / FOOTER ================= -->
+<footer class="footer" id="community">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Dab67 flame logo" class="footer-logo" onerror="this.style.display='none'">
+      <span class="nav-word">DAB<em>67</em></span>
+    </div>
+
+    <div class="footer-links">
+      <a href="#" target="_blank" rel="noopener">Twitter / X</a>
+      <a href="#" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://dexscreener.com" target="_blank" rel="noopener">DexScreener</a>
+      <a href="https://pump.fun" target="_blank" rel="noopener">Pump.fun</a>
+    </div>
+  </div>
+
+  <div class="footer-ca reveal">
+    <span>CA</span>
+    <code id="caAddress3">AHuUiC8EXYmDDwjjYZj4Kck1vCcUWzna1gvNxSiqpump</code>
+    <button class="mini-copy" id="miniCopy2" aria-label="Copy contract address">Copy</button>
+  </div>
+
+  <p class="footer-disclaimer">
+    $DAB67 is a meme token with no intrinsic value or expectation of financial return.
+    It is not affiliated with any real person, athlete, or brand referenced by internet meme culture.
+    Nothing on this site is financial advice. Crypto is volatile — only risk what you can afford to lose.
+  </p>
+
+  <p class="footer-copy">© 2026 $DAB67. No rights reserved, it's a joke on a chart.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
